@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOVIES=('pushpa' 'rrr' 'devara')
+MOVIES=('pushpa''rrr''devara')
 
 echo $MOVIES
 
