@@ -1,5 +1,5 @@
 #!/bin/bash
 
-read USERNAME
+read -s USERNAME
 
 echo "$USERNAME"
