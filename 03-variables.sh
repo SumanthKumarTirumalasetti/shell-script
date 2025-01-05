@@ -1,9 +1,9 @@
 #!/bin/bash
 
-Person1=Emu
-Person2=Laddu
+PERSON1=Emu
+PERSON2=Laddu
 
-echo "$person1:: Hi $person2"
-echo "$person2:: Hi $person1"
-echo "$person1:: what are you doing $person2"
-echo "$person2:: waiting for you $person1"
+echo "$PERSON1:: Hi $PERSON2"
+echo "$PERSON2:: Hi $PERSON1"
+echo "$PERSON1:: what are you doing $PERSON2"
+echo "$PERSON2:: waiting for you $PERSON1"
