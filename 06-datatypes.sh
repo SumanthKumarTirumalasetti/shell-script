@@ -10,3 +10,7 @@ echo "Script executed at $TIMESTAMP"
 TOTAL=$(($VALUE1+$VALUE2))
 
 echo "Total value is $TOTAL"
+
+LIST=$(ls -l)
+
+echo $LIST
