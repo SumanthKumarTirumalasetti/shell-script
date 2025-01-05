@@ -10,3 +10,11 @@ else
     echo "Number is graterthen 100"
 
 fi
+
+
+if [ find . -type f -name '*.sh' ]
+then
+    echo "File exists"
+else
+    echo "File not exists"
+fi
