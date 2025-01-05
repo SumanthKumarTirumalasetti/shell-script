@@ -12,7 +12,7 @@ else
 fi
 
 
-if [ find . -type f -name '*.sh' ]
+if [ find . -type f -name '*.sh' > /dev/null]
 then
     echo "File exists"
 else
