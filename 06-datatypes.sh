@@ -11,6 +11,6 @@ TOTAL=$(($VALUE1+$VALUE2))
 
 echo "Total value is $TOTAL"
 
-LIST=$(ls -l)
+LIST=$(ls -lh)
 
 echo $LIST
