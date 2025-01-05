@@ -7,3 +7,5 @@ echo $MOVIES
 echo ${MOVIES[2]}
 
 echo ${MOVIES[@]}
+
+echo ${MOVIES[*]}
