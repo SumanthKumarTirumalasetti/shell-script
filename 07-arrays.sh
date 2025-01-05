@@ -4,6 +4,6 @@ MOVIES=("pushpa" "rrr" "devara")
 
 echo $MOVIES
 
-echo ${MOVIES[0]}
+echo ${MOVIES[2]}
 
 echo ${MOVIES[@]}
