@@ -14,4 +14,9 @@ else
     sudo dnf install mysql-server -y > log.txt
 fi
 
-#dnf install mysql-server -y
+if [ $? -eq 0 ]
+then
+    echo "Installation completed successfully"
+else
+    echo "Installation failed with error code: $?"
+fi
