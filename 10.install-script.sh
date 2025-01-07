@@ -22,10 +22,10 @@ else
 fi
 
 echo "enabling the mysql-server"
-systemctl enable mysqld
+sudo systemctl enable mysqld
 
 echo "Start the mysql-server"
-systemctl start mysqld
+sudo systemctl start mysqld
 
 echo "Checking the SQL Service status"
-systemctl status mysqld
+sudo systemctl status mysqld
