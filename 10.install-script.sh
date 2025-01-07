@@ -20,3 +20,12 @@ then
 else
     echo "Installation failed with error code: $?"
 fi
+
+echo "enabling the mysql-server"
+systemctl enable mysqld
+
+echo "Start the mysql-server"
+systemctl start mysqld
+
+echo "Checking the SQL Service status"
+systemctl status mysqld
