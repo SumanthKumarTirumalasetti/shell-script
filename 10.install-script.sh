@@ -1,3 +1,7 @@
 #!/bin/bash
 
-dnf install mysql-server -y
+CHECKUSERID=$(id -u)
+
+echo "$CHECKUSERID"
+
+#dnf install mysql-server -y
