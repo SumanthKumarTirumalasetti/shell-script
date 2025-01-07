@@ -4,7 +4,7 @@ CHECKUSERID=$(id -u)
 
 echo "$CHECKUSERID"
 
-if [ $CHECKUSERID -e $CHECKUSERID ]
+if [ $CHECKUSERID -eq $CHECKUSERID ]
 then
     sudo su
     NEWID=$(id)
