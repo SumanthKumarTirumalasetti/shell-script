@@ -9,7 +9,7 @@ then
 fi
 
 echo "Installing mysql-server"
-#dnf install mysql-server -y
+dnf install mysql-server -y >> log.txt
 
 if [ $? -eq 0 ]
 then
@@ -18,8 +18,8 @@ else
     echo "MySql server installation failed"
 fi
 
-echo "Starting mysql-server"
-systemctl start mysqld
+echo "Starting mysql-server" 
+systemctl start mysqld >> log.txt
 
 if [ $? -eq 0 ]
 then
@@ -29,7 +29,7 @@ else
 fi
 
 echo "enabling mysql-server"
-systemctl enable mysqld
+systemctl enable mysqld >> log.txt
 
 if [ $? -eq 0 ]
 then
