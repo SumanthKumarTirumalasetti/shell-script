@@ -9,7 +9,7 @@ then
 fi
 
 echo "Installing mysql-server"
-dnf install mysql-server -y
+#dnf install mysql-server -y
 
 if [ $? -eq 0 ]
 then
