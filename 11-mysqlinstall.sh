@@ -8,4 +8,6 @@ then
     exit 2
 fi
 
+echo $?
+
 echo "Installing mysql-server"
