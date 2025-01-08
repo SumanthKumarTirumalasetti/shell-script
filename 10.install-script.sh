@@ -21,6 +21,8 @@ else
     echo "Installation failed with error code: $?"
 fi
 
+
+
 echo "enabling the mysql-server"
 sudo systemctl enable mysqld >> log.txt
 
