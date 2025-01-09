@@ -2,39 +2,39 @@
 
 USERID=$(id -u)
 
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 ... FAILURE"
+        exit 1
+    else
+        echo "$2 ... SUCCESS"
+    fi
+}
+
 if [ $USERID -ne 0 ]
 then
-    echo "You are not a admin user and you must have admin access to run the program"
-    exit 1
+    echo "ERROR:: You must have sudo access to execute this script"
+    exit 1 #other than 0
 fi
 
-echo "Installing mysql-server"
-dnf install mysql-server -y >> log.txt
+dnf list installed mysql
 
-if [ $? -eq 0 ]
-then
-    echo "MySql server installation completed successfully"
+if [ $? -ne 0 ]
+then # not installed
+    dnf install mysql -y
+    VALIDATE $? "Installing MySQL"
 else
-    echo "MySql server installation failed"
+    echo "MySQL is already ... INSTALLED"
 fi
 
-echo "Starting mysql-server" 
-systemctl start mysqld >> log.txt
 
-if [ $? -eq 0 ]
+dnf list installed git
+
+if [ $? -ne 0 ]
 then
-    echo "MySql service has been started successfully"
+    dnf install git -y
+    VALIDATE $? "Installing Git"
 else
-    echo "MySql service has not been started successfully"
+    echo "Git is already ... INSTALLED"
 fi
-
-echo "enabling mysql-server"
-systemctl enable mysqld >> log.txt
-
-if [ $? -eq 0 ]
-then
-    echo "MySql server has been enabled successfully"
-else
-    echo "MySql server has not been enabled"
-fi
-
