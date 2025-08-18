@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Taking user input from argument level from command line
+# Taking user input from argument level from command line 
 
 echo "Please enter PERSON1 USERNAME:"
 read -s PRESON1
