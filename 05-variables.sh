@@ -3,7 +3,7 @@
 # Taking user input from argument level from command line 
 
 echo "Please enter PERSON1 USERNAME:"
-read -s PRESON1
+read -s PERSON1
 
 echo "Please enter PERSON2 USERNAME:"
 read -s PERSON2
