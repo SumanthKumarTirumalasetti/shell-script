@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=($id -u)
+USERID=$(id -u)
 
 #Colour codes
 
@@ -20,7 +20,7 @@ validate() {
 
 if [ $USERID -ne 0 ]
 then
-    echo  "ERROR:: You must have sudo access to execute this script"
+    echo -e $R "ERROR:: You must have sudo access to execute this script"
     exit 1 # otherthan 0
 fi
 
