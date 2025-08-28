@@ -18,7 +18,7 @@ validate() {
     fi
 }
 
-if [$USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo -e $R "ERROR:: You must have sudo access to execute this script"
     exit 1 # otherthan 0
@@ -26,7 +26,7 @@ fi
 
 dnf list installed mysql
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
     dnf install mysql -y
     validate $? "Installing MySql"
@@ -36,7 +36,7 @@ fi
 
 dnf list installed git
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
     dnf install git -y
     validate $? "Installing GIT"
