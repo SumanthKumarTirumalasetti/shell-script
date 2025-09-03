@@ -5,7 +5,7 @@ USERID=$(id -u)
 R="\e[32m"
 G="\e[33m"
 Y="\e[34m"
-N="\e[30m"
+N="\e[0m"
 
 
 LOGS_FOLDER="/var/log/shellscript-logs"
