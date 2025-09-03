@@ -5,6 +5,7 @@ USERID=$(id -u)
 R="\e[32m"
 G="\e[33m"
 Y="\e[34m"
+N="\e[30m"
 
 
 LOGS_FOLDER="/var/log/shellscript-logs"
@@ -54,7 +55,7 @@ then
     dnf install mysql -y &>>$LOG_FILE_NAME
     validate $? "Installing MySql"
 else
-    echo -e "MySQL is already ... $Y installed"
+    echo -e "MySQL is already ... $Y installed "
 fi
 
 dnf list installed git &>>$LOG_FILE_NAME
@@ -74,5 +75,5 @@ then
     dnf remove mysql -y &>>$LOG_FILE_NAME
     remove $? "Uninstall of MySQL is"
 else
-    echo "MySQL is not installed"
+    echo -e $R "MySQL is not installed"
 fi
