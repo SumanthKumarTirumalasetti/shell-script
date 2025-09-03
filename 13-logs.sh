@@ -25,11 +25,12 @@ validate() {
 
 remove(){
 
-    if [ $? -e 0 ]
+    if [ $? -eq 0 ]
     then
         echo "$2 ... Success"
     else
         echo "$2 ... Failure"
+    fi
 }
 
 check(){
@@ -68,7 +69,7 @@ fi
 
 dnf list installed mysql &>>$LOG_FILE_NAME
 
-if [ $? -e 0]
+if [ $? -eq 0]
 then
     dnf remove mysql -y
     remove $? "Uninstall of MySQL is"
