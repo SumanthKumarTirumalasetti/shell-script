@@ -17,9 +17,9 @@ validate() {
 
     if [ $? -ne 0 ]
     then
-        echo "$2 ... Failure"
+        echo "$2 ... Failure $N"
     else
-        echo "$2 ... Success"
+        echo "$2 ... Success $N"
     fi
 
 }
@@ -28,9 +28,9 @@ remove(){
 
     if [ $? -eq 0 ]
     then
-        echo "$2 ... Success"
+        echo "$2 ... Success $N"
     else
-        echo "$2 ... Failure"
+        echo "$2 ... Failure $N"
     fi
 }
 
@@ -55,7 +55,7 @@ then
     dnf install mysql -y &>>$LOG_FILE_NAME
     validate $? "Installing MySql"
 else
-    echo -e "MySQL is already ... $Y installed "
+    echo -e "MySQL is already ... $Y installed $N "
 fi
 
 dnf list installed git &>>$LOG_FILE_NAME
@@ -65,7 +65,7 @@ then
     dnf install git -y &>>$LOG_FILE_NAME
     validate $? "Installing GIT"
 else
-    echo -e "Git is already ... $Y Installed"
+    echo -e "Git is already ... $Y Installed $N"
 fi
 
 dnf list installed mysql &>>$LOG_FILE_NAME
@@ -75,5 +75,5 @@ then
     dnf remove mysql -y &>>$LOG_FILE_NAME
     remove $? "Uninstall of MySQL is"
 else
-    echo -e $R "MySQL is not installed"
+    echo -e "MySQL is not installed"
 fi
