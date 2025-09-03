@@ -33,6 +33,8 @@ fi
 
 }
 
+check
+
 echo "Script started executing at: $TIME_STAMP" &>>$LOG_FILE_NAME
 
 dnf list installed mysql &>>$LOG_FILE_NAME
