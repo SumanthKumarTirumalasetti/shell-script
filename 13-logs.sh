@@ -17,9 +17,9 @@ validate() {
 
     if [ $? -ne 0 ]
     then
-        echo "$2 ... Failure $N"
+        echo -e "$2 ... Failure $N"
     else
-        echo "$2 ... Success $N"
+        echo -e "$2 ... Success $N"
     fi
 
 }
@@ -28,9 +28,9 @@ remove(){
 
     if [ $? -eq 0 ]
     then
-        echo "$2 ... Success $N"
+        echo -e "$2 ... Success $N"
     else
-        echo "$2 ... Failure $N"
+        echo -e "$2 ... Failure $N"
     fi
 }
 
