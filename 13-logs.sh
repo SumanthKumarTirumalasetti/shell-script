@@ -69,7 +69,7 @@ fi
 
 dnf list installed mysql &>>$LOG_FILE_NAME
 
-if [ $? -eq 0]
+if [ $? -eq 0 ]
 then
     dnf remove mysql -y
     remove $? "Uninstall of MySQL is"
