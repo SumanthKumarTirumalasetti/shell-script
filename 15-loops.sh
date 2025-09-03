@@ -22,6 +22,16 @@ validate() {
     fi
 }
 
+remove() {
+
+    if [ $? -ne 0 ]
+    then
+        echo -e "$2 ... $R FAILURE $N"
+    else
+        echo -e "$2 ... $G SUCCESS $N"
+    fi
+}
+
 CHECK_ROOT() {
 
     if [ $USERID -ne 0 ]
@@ -46,3 +56,17 @@ do
         echo -e "$package is already $Y ... INSTALLED $N"
     fi
 done
+
+for package in $1
+do
+    dnf list installed $package &>>$LOG_FILE_NAME
+    if [ $? -eq 0 ]
+    then
+        dnf remove $package -y &>>$LOG_FILE_NAME
+        remove $? "Removing $package"
+
+    else
+        echo -e "MySQL is not installed"
+    fi
+done
+
