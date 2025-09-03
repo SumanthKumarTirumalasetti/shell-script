@@ -23,6 +23,15 @@ validate() {
 
 }
 
+remove(){
+
+    if [ $? -e 0 ]
+    then
+        echo "$2 ... Success"
+    else
+        echo "$2 ... Failure"
+}
+
 check(){
 
 if [ $USERID -ne 0 ]
@@ -55,4 +64,14 @@ then
     validate $? "Installing GIT"
 else
     echo -e "Git is already ... $Y Installed"
+fi
+
+dnf list installed mysql &>>$LOG_FILE_NAME
+
+if [ $? -e 0]
+then
+    dnf remove mysql -y
+    remove $? "Uninstall of MySQL is"
+else
+    echo "MySQL is not installed"
 fi
