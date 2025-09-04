@@ -45,5 +45,5 @@ CHECK_ROOT() {
 
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
 
-FILES_TO_DELETE=$(find $LOGS_FOLDER -name "*.log" -mtime 1)
+FILES_TO_DELETE=$(find $LOGS_FOLDER -name "*.*" -mtime +14)
 echo "Files to be deleted: $FILES_TO_DELETE"
