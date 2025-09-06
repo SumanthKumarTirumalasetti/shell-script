@@ -18,7 +18,7 @@ DAYS=${3:-14}
 
 LOGS_FOLDER="/home/ec2-user/shell-scriptlogs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
-TIME_STAMP=$($date +%Y-%m-%d-%H-%M-%S)
+TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIME_STAMP.log"
 
 
