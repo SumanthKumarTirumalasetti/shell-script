@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# -gt , -lt , -ge , -le
+# -gt , -lt , -ge , -le and conditions
 
 NUMBER=$1
 
