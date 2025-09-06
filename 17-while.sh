@@ -12,6 +12,6 @@ TOTAL_FILES=$(find $SOURCE_DIR \( -name "*.log" -o -name "*.js" -o -name "*.java
 
 while read -r file
 do
-    cho "Moving $file to $DEST_DIR"
+    echo "Moving $file to $DEST_DIR"
     mv $TOTAL_FILES $DEST_DIR
 done <<< $TOTAL_FILES
