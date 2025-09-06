@@ -49,13 +49,13 @@ fi
 
 if [ ! -d $SOURCE_DIRECTORY ]
 then
-    echo -e "$SOURCE_DIRECTORY does not exists"
+    echo -e "$SOURCE_DIRECTORY $R does not exists $N ... Please check"
     exit 1
 fi
 
 if [ ! -d $DESTINATION_DIRECTORY ]
 then
-     echo -e "$DESTINATION_DIRECTORY does not exists"
+     echo -e "$DESTINATION_DIRECTORY $R does not exists $N ... Please check"
      exit 1
 fi
 
