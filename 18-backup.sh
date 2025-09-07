@@ -60,5 +60,5 @@ then
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
-echo files
+echo $Files
 
