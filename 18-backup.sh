@@ -87,7 +87,10 @@ then
             echo $filepath
             rm -rf $filepath
             echo "Deleted files $filepath"
-        done < $FILES
+        done <<< $FILES
+    else
+        echo "ZIP file creation failed"
+    fi
 else
     echo "No files to zip"
 fi
