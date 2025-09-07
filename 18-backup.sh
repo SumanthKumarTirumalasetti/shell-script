@@ -94,3 +94,37 @@ then
 else
     echo "No files to zip"
 fi
+
+# File Test Operators
+# Operator	Description
+# -e	File exists (any type)
+# -f	File exists and is a regular file
+# -d	File exists and is a directory
+# -s	File exists and is not empty
+# -r	File is readable
+# -w	File is writable
+# -x	File is executable
+# -L	File is a symbolic link
+# -b	File is a block device
+# -c	File is a character device
+# -p	File is a named pipe (FIFO)
+# -S	File is a socket
+# -t	File descriptor is open and refers to a terminal
+# 🔤 String Test Operators
+# Operator	Description
+# -z	String is empty
+# -n	String is not empty
+# =	Strings are equal
+# !=	Strings are not equal
+# <	String1 is less than String2 (lexicographically)
+# >	String1 is greater than String2 (lexicographically)
+# Note: < and > must be escaped or used inside [[ ... ]] to avoid shell interpretation.
+
+# 🔢 Integer Comparison Operators
+# Operator	Description
+# -eq	Equal (==)
+# -ne	Not equal (!=)
+# -gt	Greater than (>)
+# -lt	Less than (<)
+# -ge	Greater than or equal (>=)
+# -le	Less than or equal (<=)
