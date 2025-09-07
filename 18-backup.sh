@@ -38,8 +38,8 @@ usage(){
 }
 
 mkdir -p "/home/ec2-user/shell-scriptlogs"
-mkdir -p $1
-mkdir -p $2
+# mkdir -p $1
+# mkdir -p $2
 
 
 if [ $# -lt 2 ]
