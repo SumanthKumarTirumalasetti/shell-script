@@ -79,7 +79,7 @@ then
     ZIP_FILE="$DESTINATION_DIRECTORY/app-log-$TIME_STAMP.zip"
     find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
     echo "$ZIP_FILE"
-    if [ -n $FILES ]
+    if [ -f $FILES ]
     then
         echo "ZIP file is successfully created"
         while read -r filepath
