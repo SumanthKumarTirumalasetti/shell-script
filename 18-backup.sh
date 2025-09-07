@@ -23,7 +23,7 @@ LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIME_STAMP.log"
 
 
 validate(){
-    if [ $? -ne 0]
+    if [ $? -ne 0 ]
     then
         echo -e "$2 ... $R FAILURE $N"
         exit 1
@@ -59,6 +59,6 @@ then
      exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime $DAYS)
 echo $FILES
 
