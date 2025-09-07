@@ -8,7 +8,7 @@
 SOURCE_DIR="/home/ec2-user/"
 DEST_DIR="/home/ec2-user/app-logs"
 
-TOTAL_FILES=$(find -path $SOURCE_DIR -prune -o type f \( -name "*.log" -o -name "*.js" -o -name "*.java" \) -mtime +14)
+TOTAL_FILES=$(find  $SOURCE_DIR -path $DEST_DIR -prune -o type f \( -name "*.log" -o -name "*.js" -o -name "*.java" \) -mtime -14)
 
 while read -r file
 do
