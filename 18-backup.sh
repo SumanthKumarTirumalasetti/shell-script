@@ -62,6 +62,17 @@ fi
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS)
 # echo "$FILES"
 
+dnf list installed zip
+
+if [ $? -ne 0 ]
+then
+    dnf install zip -y
+    validate $? "ZIP installation"
+else
+    echo "ZIP has already been installed"
+fi
+
+
 if [ -n "$FILES" ]
 then
     echo "$FILES"
