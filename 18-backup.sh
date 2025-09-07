@@ -79,6 +79,15 @@ then
     ZIP_FILE="$DESTINATION_DIRECTORY/app-log-$TIME_STAMP.zip"
     find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
     echo "$ZIP_FILE"
+    if [ -n $FILES ]
+    then
+        echo "ZIP file is successfully created"
+        while read -r filepath
+        do
+            echo $filepath
+            rm -rf $filepath
+            echo "Deleted files $filepath"
+        done < $FILES
 else
     echo "No files to zip"
 fi
