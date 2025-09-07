@@ -64,7 +64,7 @@ FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS)
 
 if [ -n "$FILES" ]
 then
-    echo $FILES
+    echo "$FILES"
     ZIP_FILE="$DESTINATION_DIRECTORY/app-log-$TIME_STAMP.zip"
     find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
 else
