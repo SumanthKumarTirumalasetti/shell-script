@@ -59,6 +59,6 @@ then
      exit 1
 fi
 
-FILES=$(find $SOURCE_DIRECTORY -name "*.log" +mtime $DAYS)
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" +mtime +$DAYS)
 echo $FILES
 
