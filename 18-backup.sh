@@ -59,8 +59,6 @@ then
      exit 1
 fi
 
-FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS)
-# echo "$FILES"
 
 dnf list installed zip
 
@@ -72,6 +70,8 @@ else
     echo "ZIP has already been installed"
 fi
 
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS)
+# echo "$FILES"
 
 if [ -n "$FILES" ]
 then
