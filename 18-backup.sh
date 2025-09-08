@@ -60,15 +60,15 @@ then
 fi
 
 
-dnf list installed zip &>>$LOG_FILE_NAME
+# dnf list installed zip &>>$LOG_FILE_NAME
 
-if [ $? -ne 0 ]
-then
-    sudo dnf install zip -y &>>$LOG_FILE_NAME
-    validate $? "ZIP installation"
-else
-    echo "ZIP has already been installed"
-fi
+# if [ $? -ne 0 ]
+# then
+#     sudo dnf install zip -y &>>$LOG_FILE_NAME
+#     validate $? "ZIP installation"
+# else
+#     echo "ZIP has already been installed"
+# fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +$DAYS)
 # echo "$FILES"
